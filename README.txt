@@ -48,7 +48,7 @@ Audio API – for jump, score, and collision sound effects
 
 Clone or download this repository:
 
-git clone https://github.com/binduutti/flappy-bird-game.git
+git clone https://github.com/binduutti/my-flappy-bird.git
 
 
 Open index.html in your browser.
@@ -82,4 +82,5 @@ flappy-bird-game/
 -------------------------
 [UTTI SAI BINDU]
 💻 FullStack Developer
+
 📧 [binduutti@gmail.com]
