@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+</head>
+<body>
+   <div id="game-container">
+        <!-- Clouds -->
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+
+        <!-- Buildings -->
+        <div class="buildings">
+            <div class="building" style="height: 80px;"></div>
+            <div class="building" style="height: 110px;"></div>
+            <div class="building" style="height: 70px;"></div>
+            <div class="building" style="height: 95px;"></div>
+            <div class="building" style="height: 85px;"></div>
+        </div>
+
+        <!-- Ground -->
+        <div class="ground"></div>
+
+        <!-- Bird -->
+        <div id="bird"></div>
+
+        <!-- Score -->
+        <div id="score">0</div>
+
+        <!-- Game Over Modal -->
+        <div id="gameOver">
+            <h2>Game Over!</h2>
+            <p>Score: <span id="finalScore">0</span></p>
+            <button id="retryBtn">Retry</button>
+        </div>
+
+        <!-- Instructions -->
+        <div id="instructions">
+            <p>Press SPACE or Click to Jump!</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
