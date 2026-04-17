@@ -94,3 +94,6 @@ http://localhost:8000
 - Include sprite-based bird animations for a more polished look
 - Add difficulty modes (Easy / Normal / Hard) with preset pipe speeds and gap sizes
 - Implement a night mode / theme toggle
+
+## 🚀 Live Project
+👉 https://myflappy-bird.netlify.app/
