@@ -1,85 +1,96 @@
-🐦 Flappy Bird Game (HTML, CSS, JavaScript)
+# 🐦 Flappy Bird — Browser Game
 
-A fun and lightweight Flappy Bird clone built using pure HTML, CSS, and JavaScript — no frameworks required!
-Fly the bird through the pipes, earn points, and see how long you can survive.
-Includes smooth animations, dynamic backgrounds, and sound effects for an immersive arcade experience.
+A fun, browser-based Flappy Bird clone built with vanilla HTML, CSS, and JavaScript. No libraries, no frameworks — just pure web tech. Tap or press Space to keep the bird airborne and dodge the pipes!
 
-🎮 Features
+---
 
-🕹️ Simple Controls:
+## 📖 Description
 
-Press Spacebar or Click anywhere to make the bird jump.
+This is a lightweight recreation of the classic Flappy Bird game that runs entirely in the browser. The bird falls due to gravity and jumps when you press Space or click the screen. Your goal is to fly through as many pipe gaps as possible without crashing. The game gets progressively harder as the pipes speed up over time.
 
-🌆 Dynamic Environment:
+---
 
-Animated clouds, city skyline, and a lush ground layer.
+## ✨ Features
 
-🚧 Randomized Pipes:
+- **Gravity & physics** — the bird accelerates downward naturally and tilts to reflect its velocity
+- **Jump mechanic** — press `Space` or click anywhere on the game container to flap
+- **Procedurally generated pipes** — pipe heights are randomized every 2 seconds
+- **Progressive difficulty** — pipe speed gradually increases as you play longer
+- **Score tracking** — your score increments each time you pass through a pair of pipes
+- **Sound effects** — audio feedback for jumping, scoring, and hitting a pipe
+- **Game Over screen** — shows your final score with a Retry button
+- **Animated bird** — the bird rotates forward when falling and tilts up on jump
+- **City skyline backdrop** — decorative buildings and animated clouds for visual depth
 
-Pipes are generated at different heights for endless challenges.
+---
 
-💥 Collision Detection:
+## 🛠️ Technologies Used
 
-Game over triggers when the bird hits a pipe or the ground.
+| Technology | Purpose |
+|---|---|
+| HTML5 | Game structure and DOM layout |
+| CSS3 | Styling, animations, and visual effects |
+| Vanilla JavaScript | Game logic, physics, collision detection |
+| Web Audio API (`Audio`) | Sound effects (jump, score, hit) |
+| `requestAnimationFrame` | Smooth game loop |
+| `setInterval` | Pipe spawning at fixed intervals |
 
-🔊 Sound Effects:
+---
 
-Added realistic jump, score, and hit sounds for better feedback.
+## 📁 Project Structure
 
-📈 Progressive Difficulty:
+```
+flappy-bird/
+├── index.html        # Main HTML file — game container, bird, score display, and modals
+├── style.css         # All visual styling — bird, pipes, ground, clouds, buildings, UI
+├── script.js         # Game logic — physics, pipe movement, collision, score, sound
+├── jump.mpeg         # Sound played when the bird jumps
+├── score.aac         # Sound played when a pipe is passed
+└── out.mpeg          # Sound played on collision / game over
+```
 
-Pipe speed gradually increases as your score rises.
+---
 
-🔁 Retry System:
+## 🚀 How to Run
 
-Instantly restart the game after a collision.
+No build tools or installations needed. Just open the file in your browser.
 
-🧩 Technologies Used
+**Option 1 — Direct open:**
+1. Download or clone this repository
+2. Open `index.html` in any modern browser (Chrome, Firefox, Edge, Safari)
 
-HTML5 – game structure and layout
+**Option 2 — Local dev server (recommended to avoid audio issues):**
+```bash
+# Using Python
+python -m http.server 8000
 
-CSS3 – background design, animation, and styling
+# Then open:
+http://localhost:8000
+```
 
-JavaScript (Vanilla) – game physics, logic, and event handling
+> **Note:** Some browsers block audio autoplay when opening files directly from the filesystem (`file://`). Running a local server ensures sound effects work correctly.
 
-Audio API – for jump, score, and collision sound effects
+---
 
-🚀 How to Play
+## 🎮 How to Play
 
-Clone or download this repository:
+1. Open the game — it starts automatically
+2. **Press `Space`** or **click the game area** to make the bird flap upward
+3. Navigate through the gaps between the green pipes
+4. Each pair of pipes you pass through adds **+1** to your score
+5. The game ends if the bird:
+   - Hits a pipe
+   - Touches the ground
+   - Flies above the top of the screen
+6. Click **Retry** on the Game Over screen to play again
 
-git clone https://github.com/binduutti/my-flappy-bird.git
+---
 
+## 🔮 Future Improvements
 
-Open index.html in your browser.
-
-Press Spacebar or click the screen to jump.
-
-Avoid pipes and keep flying to increase your score!
-
-📁 Project Structure
-flappy-bird-game/
-│
-├── index.html       # Main game HTML file
-├── style.css        # All visual styles and layout
-├── script.js        # Game logic and sound implementation
-├── jump.mpeg        # Jump sound effect
-├── score.aac        # Score sound effect
-└── out.mpeg         # Hit/collision sound effect
-
-🧠 Future Improvements
-
-🎵 Background music with mute/unmute toggle
-
-🌙 Night mode or weather transitions
-
-🏅 Local high score tracking (via localStorage)
-
-💫 Power-ups (invincibility, double score, slow motion)
-
-
-🖋️ Author
--------------------------
-[UTTI SAI BINDU]
-💻 FullStack Developer
-📧 [binduutti@gmail.com]
+- Add a high score tracker using `localStorage` so your best score persists between sessions
+- Introduce a start screen so the game doesn't begin immediately on load
+- Add mobile touch support with on-screen tap zones
+- Include sprite-based bird animations for a more polished look
+- Add difficulty modes (Easy / Normal / Hard) with preset pipe speeds and gap sizes
+- Implement a night mode / theme toggle
